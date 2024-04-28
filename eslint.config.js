@@ -16,7 +16,7 @@ export default tseslint.config(
       parser: vueEslintParser,
       parserOptions: {
         parser: tseslint.parser,
-      }
-    }
-  }
+      },
+    },
+  },
 )
