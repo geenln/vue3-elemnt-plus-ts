@@ -4,6 +4,7 @@
     "pkief.material-icon-theme",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint"
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens"
   ]
 }
