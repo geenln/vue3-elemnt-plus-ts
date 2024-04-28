@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "pkief.material-icon-theme",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}
