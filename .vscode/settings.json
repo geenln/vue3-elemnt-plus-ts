@@ -2,5 +2,9 @@
   "editor.fontSize": 18,
   "files.autoSave": "afterDelay",
   "files.eol": "\n",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }

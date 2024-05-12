@@ -5,6 +5,7 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "bradlc.vscode-tailwindcss"
   ]
 }
