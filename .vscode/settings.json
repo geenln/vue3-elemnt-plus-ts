@@ -6,5 +6,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.quickSuggestions": {
     "strings": "on"
-  }
+  },
+  "i18n-ally.localesPaths": ["src/i18n/lang"]
 }

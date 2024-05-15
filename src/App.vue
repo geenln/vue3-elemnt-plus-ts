@@ -1,11 +1,23 @@
 <script setup lang="ts">
-import {useCounterStore} from './store/modules/counter'
+import {useCounterStore} from '@/store/modules/counter'
+import {useI18n} from 'vue-i18n'
 
 const counterStore = useCounterStore()
+const {t, locale} = useI18n()
 </script>
 
 <template>
   <h1>Vue3 Element Plus Ts</h1>
+  <button
+    class="border p-2 rounded-md"
+    @click="locale = locale !== 'zh' ? 'zh' : 'en'"
+  >
+    切换语言 {{ locale }}
+  </button>
+  <div>
+    {{ t('message') }}
+  </div>
+
   <button class="border p-2 rounded-md" @click="counterStore.increment()">
     count加1
   </button>
