@@ -2,6 +2,7 @@
 import {useCounterStore} from '@/store/modules/counter'
 import {useI18n} from 'vue-i18n'
 import {useLocaleSwitcher} from '@/hooks/useLocaleSwitcher'
+import http from '@/common/http'
 
 const counterStore = useCounterStore()
 const {currentLocale, elementLocale, locales, switchLocale} =
@@ -13,6 +14,27 @@ const localeValue = ref()
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+
+const baseUrl =
+  'https://mock.presstime.cn/mock/6655e837dd3831604fff689f/example'
+const handleRequest = (type: string) => {
+  if ('normal' === type) {
+    http.get(`${baseUrl}/normal`).then(res => {
+      console.info('normal: ', res)
+    })
+  }
+
+  if ('failed' === type) {
+    http
+      .get(`${baseUrl}/failed`)
+      .then(res => {
+        console.info('failed: ', res)
+      })
+      .catch(error => {
+        console.error('error: ', error)
+      })
+  }
+}
 </script>
 
 <template>
@@ -34,6 +56,11 @@ const toggleDark = useToggle(isDark)
     <button class="border p-2 rounded-md" @click="counterStore.increment()">
       count加1
     </button>
+
+    <ElButton @click="handleRequest('normal')"> 正常请求 </ElButton>
+
+    <ElButton @click="handleRequest('failed')"> 失败请求 </ElButton>
+
     <div class="flex gap-2">
       <span>{{ counterStore.count }}</span>
       <span>{{ counterStore.doubleCount }}</span>
