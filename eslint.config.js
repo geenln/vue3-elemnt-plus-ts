@@ -29,5 +29,8 @@ export default tseslint.config(
         ...eslintAutoImport.globals,
       },
     },
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
   },
 )
